@@ -46,3 +46,11 @@ body{
      background-color: lightgray;
      margin-top: 30vh;
 }
+@media only screen and (max-width: 1140px){
+ #b1 img{
+    margin-left: -25vh;
+ }
+ #b2 img{
+    margin-left: -25vh;
+ }
+}
