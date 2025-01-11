@@ -1,62 +1,85 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-body{
-    background-color: rgb(25, 24, 24);
-}
-.b{
-    width:auto;
-    height: 40vh;
-  }
-#b1{
-    display: block;
-    position:absolute;
-    margin-left: 33%;
-    }
-#b1 img{
-    height: 70vh;
-    width: auto;
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #121212;
+    color: white;
 }
-#b2{
-    display: block;
-    position:absolute;
-    margin-left: 33%;
-    }
-#b2 img{
-    height: 70vh;
-    width: auto;
-    align-items: center;
-    justify-content: center;
+
+.b {
+    text-align: center;
 }
- div{
-     text-align: center;
-  }
- #d1{
-     height: 7.5vh;
-     width: 22vh;
-     background-color: orange;       
-     margin-top: 30vh;
-  }
- #d2{
-     height: 7.5vh;
-     width: 22vh;
-     background-color: lightgray;
-     margin-top: 30vh;
+
+.b img {
+    max-width: 90%;
+    height: auto;
+    max-height: 90%;
+    filter: brightness(0.8);
+    transition: filter 0.4s ease;
 }
-@media only screen and (max-width: 1140px){
- #b1 img{
-    margin-left: -25vh;
- }
- #b2 img{
-    margin-left: -25vh;
- }
- #d1 b{
-    font-size: xx-large;
- }
- #d2 b{
-    font-size: xx-large;
- }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px; /* Increased width */
+    height: 40px; /* Increased height */
+    margin-top: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black; /* Off state */
+    border: 1px solid white;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+    border-radius: 40px; /* Adjust to match the new height */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px; /* Adjust height */
+    width: 30px; /* Adjust width */
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3; /* Active state */
+}
+
+input:checked + .slider:before {
+    transform: translateX(40px); /* Adjust the translation for larger button */
+}
+
+.icon {
+    position: absolute;
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.sun {
+    left: 8px; /* Adjust position for the larger button */
+}
+
+.moon {
+    right: 8px; /* Adjust position for the larger button */
 }
