@@ -83,3 +83,11 @@ input:checked + .slider:before {
 .moon {
     right: 8px; /* Adjust position for the larger button */
 }
+
+.search-image {
+  display: none; /* Hide by default */
+}
+
+.parent:hover .search-image {
+  display: block; /* Show only on hover */
+}
